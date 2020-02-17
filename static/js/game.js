@@ -23,41 +23,35 @@ actual_word2.innerHTML = random_word();
 actual_word3.innerHTML = random_word();
 
 
-wordInput.addEventListener('input', (event)=>{
+wordInput.addEventListener('input', (event)=> {
   if (actual_word1.innerHTML === event.target.value.toUpperCase()) {
     console.log('kutya');
     event.target.value = '';
     actual_word1.innerHTML = random_word();
     random_word()
   }
-
-let wordInput = document.querySelector('.input')
-wordInput.addEventListener('input', (event)=>{
-  if (actual_word2.innerHTML === event.target.value.toUpperCase()) {
-    console.log('kutya');
-    event.target.value = '';
-    actual_word2.innerHTML = random_word()
-  }
 });
-wordInput.addEventListener('input', (event)=>{
-  if (actual_word3.innerHTML === event.target.value.toUpperCase()) {
-    console.log('kutya');
-    event.target.value = '';
-    actual_word3.innerHTML = random_word()
+
+  wordInput.addEventListener('input', (event) => {
+    if (actual_word2.innerHTML === event.target.value.toUpperCase()) {
+      console.log('kutya');
+      event.target.value = '';
+      actual_word2.innerHTML = random_word()
+    }
+  });
+
+  wordInput.addEventListener('input', (event) => {
+    if (actual_word3.innerHTML === event.target.value.toUpperCase()) {
+      console.log('kutya');
+      event.target.value = '';
+      actual_word2.innerHTML = random_word()
+    }
+  });
+
+
+  function random_word() {
+    let random_index = Math.floor(Math.random() * 112);
+    let chosen_word = list[random_index];
+    return chosen_word;
   }
-})
-
-function random_word() {
-  let random_index = Math.floor(Math.random() * 112);
-  let chosen_word = list[random_index]
-  let random_index = Math.floor(Math.random() * 112);
-  let chosen_word = list[random_index];
-  return chosen_word
-}
-
-
-
-
-
-
 

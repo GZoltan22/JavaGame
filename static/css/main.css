@@ -1,3 +1,23 @@
 body {
     background-image: url("pixel_background.jpg");
 }
+
+
+#hero{
+    position:absolute;
+    bottom: 0px;
+    left: -75px;
+    transform: rotateY(180deg);
+}
+
+#first_enemy{
+    transform: rotateY(180deg);
+        width: 200px;
+}
+
+div#enemy {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
