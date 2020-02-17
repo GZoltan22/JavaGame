@@ -16,19 +16,22 @@
 let actual_word1 = document.querySelector('.words1');
 let actual_word2 = document.querySelector('.words2');
 let actual_word3 = document.querySelector('.words3');
+let wordInput = document.querySelector('.input');
+
 actual_word1.innerHTML = random_word();
 actual_word2.innerHTML = random_word();
 actual_word3.innerHTML = random_word();
-let wordInput = document.querySelector('.input')
 
 
 wordInput.addEventListener('input', (event)=>{
   if (actual_word1.innerHTML === event.target.value.toUpperCase()) {
     console.log('kutya');
     event.target.value = '';
-    actual_word1.innerHTML = random_word()
+    actual_word1.innerHTML = random_word();
+    random_word()
   }
-});
+
+let wordInput = document.querySelector('.input')
 wordInput.addEventListener('input', (event)=>{
   if (actual_word2.innerHTML === event.target.value.toUpperCase()) {
     console.log('kutya');
@@ -47,8 +50,14 @@ wordInput.addEventListener('input', (event)=>{
 function random_word() {
   let random_index = Math.floor(Math.random() * 112);
   let chosen_word = list[random_index]
+  let random_index = Math.floor(Math.random() * 112);
+  let chosen_word = list[random_index];
   return chosen_word
 }
+
+
+
+
 
 
 
