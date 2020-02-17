@@ -6,6 +6,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
+    return render_template('menü.html')
+
+@app.route('/game_easy')
+def game_easy():
     return render_template('index.html')
 
 
