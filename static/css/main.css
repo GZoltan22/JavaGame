@@ -2,6 +2,9 @@ body {
     background-image: url("pixel_background.jpg");
 }
 
+.dead {
+    background-color: red;
+}
 
 #hero{
     position:absolute;
@@ -12,12 +15,24 @@ body {
 
 #first_enemy{
     transform: rotateY(180deg);
-        width: 200px;
+        width: 175px;
+    left: -100px;
+    height: 200px;
+    animation: run 10s;
+    animation-direction: normal;
+    animation-duration: 10s;
+}
+@keyframes run {
+    0% {left: 0px;}
+    50%{left: 100px}
+    100%{left: 250px}
 }
 
 div#enemy {
-    position: absolute;
+    position: relative;
     bottom: 0;
     right: 0;
+    font-size: 35px;
+    text-align: center;
 }
 

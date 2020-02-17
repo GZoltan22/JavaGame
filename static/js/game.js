@@ -25,10 +25,9 @@ actual_word3.innerHTML = random_word();
 
 wordInput.addEventListener('input', (event)=> {
   if (actual_word1.innerHTML === event.target.value.toUpperCase()) {
-    console.log('kutya');
     event.target.value = '';
     actual_word1.innerHTML = random_word();
-    random_word()
+    actual_word1.className = actual_word1.className.replace()
   }
 });
 
@@ -44,7 +43,7 @@ wordInput.addEventListener('input', (event)=> {
     if (actual_word3.innerHTML === event.target.value.toUpperCase()) {
       console.log('kutya');
       event.target.value = '';
-      actual_word2.innerHTML = random_word()
+      actual_word3.innerHTML = random_word()
     }
   });
 
