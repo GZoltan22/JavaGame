@@ -1,15 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-  	const list = ['ACCOUNT','ACCURATE','ACRES','ACROSS','ACT','ACTION','ACTIVE','ACTIVITY',
+ const list = ['ACCOUNT','ACCURATE','ACRES','ACROSS','ACT','ACTION','ACTIVE','ACTIVITY',
   'ACTUAL','ACTUALLY','ADD','ADDITION','ADDITIONAL','ADJECTIVE','ADULT','ADVENTURE',
   'ADVICE','AFFECT','AFRAID','AFTER','AFTERNOON','AGAIN','AGAINST','AGE',
   'AGO','AGREE','AHEAD','AID','AIR','AIRPLANE','ALIKE','ALIVE',
@@ -252,3 +241,19 @@
   'WRAPPED','WRITE','WRITER','WRITING','WRITTEN','WRONG','WROTE','YARD',
   'YEAR','YELLOW','YES','YESTERDAY','YET','YOU','YOUNG','YOUNGER',
   'YOUR','YOURSELF','YOUTH','ZERO','ZOO'];
+
+let wordInput = document.querySelector('.input')
+wordInput.addEventListener('input', (event)=>{
+  if (actual_word.innerHTML === event.target.value) {
+    console.log('kutya')
+  }
+
+})
+
+function random_word() {
+  let random_index = Math.floor(Math.random() * 1943);
+let chosen_word = list[random_index]
+  return chosen_word
+}
+let actual_word = document.querySelector('.words')
+ actual_word.innerHTML = random_word()
