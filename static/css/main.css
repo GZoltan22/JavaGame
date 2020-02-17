@@ -15,9 +15,32 @@ body {
         width: 200px;
 }
 
-div#enemy {
+div#enemy1, div#enemy2, div#enemy3 {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -1000px;
+    animation: mymove 30s infinite; /* total animation time for each image is 8 seconds, loops forever */
+    animation-direction: normal;
 }
 
+div#enemy1{
+    animation-delay:0s;
+    -webkit-animation-delay: 0s;
+}
+
+div#enemy2{
+    animation-delay:4s;
+    -webkit-animation-delay: 4s;
+}
+
+div#enemy3{
+    animation-delay:8s;
+    -webkit-animation-delay: 8s;
+}
+
+
+@keyframes mymove
+	{
+	from {right: -10%;}	/*off-screen left (adjust for image width)*/
+	to {right:90%;}		/*off-screen right*/
+	}

@@ -44,7 +44,7 @@ wordInput.addEventListener('input', (event)=> {
     if (actual_word3.innerHTML === event.target.value.toUpperCase()) {
       console.log('kutya');
       event.target.value = '';
-      actual_word2.innerHTML = random_word()
+      actual_word3.innerHTML = random_word()
     }
   });
 
