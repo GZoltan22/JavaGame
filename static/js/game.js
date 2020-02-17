@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
   	const list = ['ACCOUNT','ACCURATE','ACRES','ACROSS','ACT','ACTION','ACTIVE','ACTIVITY',
   'ACTUAL','ACTUALLY','ADD','ADDITION','ADDITIONAL','ADJECTIVE','ADULT','ADVENTURE',
   'ADVICE','AFFECT','AFRAID','AFTER','AFTERNOON','AGAIN','AGAINST','AGE',
@@ -252,3 +241,11 @@
   'WRAPPED','WRITE','WRITER','WRITING','WRITTEN','WRONG','WROTE','YARD',
   'YEAR','YELLOW','YES','YESTERDAY','YET','YOU','YOUNG','YOUNGER',
   'YOUR','YOURSELF','YOUTH','ZERO','ZOO'];
+
+button.addEventListener("click", (event)=>{
+  choose_word();
+});
+
+function choose_word(){
+
+}
