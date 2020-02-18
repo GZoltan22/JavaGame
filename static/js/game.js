@@ -30,7 +30,7 @@ wordInput.addEventListener('input', (event)=> {
     let enemy = document.getElementById('first_enemy');
     let enemy_div = document.getElementById('enemy1');
     enemy_div.id = ('dead');
-    enemy.id = ('dead')
+    enemy.id = ('dead');
     enemy.src = "static/css/rip.png";
     win_check()
   }
