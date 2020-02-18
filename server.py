@@ -32,6 +32,10 @@ def level_2():
     global chosen_hero
     return render_template('level2.html', character=chosen_hero)
 
+@app.route('/final_level')
+def final_stage():
+    global chosen_hero
+    return render_template('finale.html', character=chosen_hero)
 
 @app.route('/choose-character')
 def character():
