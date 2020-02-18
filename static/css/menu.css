@@ -1,0 +1,21 @@
+body {
+    background-image: url("pixel_background_title.jpg");
+}
+
+div.Heromenu{
+    position: absolute;
+    bottom: 3rem;
+    right: 4rem;
+}
+
+div.Dogmenu{
+    position: absolute;
+    bottom: 3.8rem;
+    right: 13rem;
+}
+
+.start{
+        position: absolute;
+    bottom: 30rem;
+    right: 50rem;
+}
