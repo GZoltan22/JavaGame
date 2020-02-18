@@ -1,0 +1,14 @@
+body {
+    background-image: url("68744943-píxel-del-fondo-arte-del-juego-con-tierra-hierba-cielo-y-las-nubes.jpg");
+}
+
+.carousel-inner > .carousel-item > img {
+    width:640px;
+  height:360px;
+    margin-bottom: auto;
+}
+
+
+h1{
+text-align: center;
+}

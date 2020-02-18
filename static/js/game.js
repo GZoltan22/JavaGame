@@ -51,7 +51,6 @@ wordInput.addEventListener('input', (event)=> {
 
   function random_word() {
     let random_index = Math.floor(Math.random() * 112);
-    let chosen_word = list[random_index];
-    return chosen_word;
+    return list[random_index];
   }
 
