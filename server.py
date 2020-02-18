@@ -38,6 +38,11 @@ def character():
     return render_template('character.html')
 
 
+@app.route('/end')
+def end():
+    return render_template('end.html')
+
+
 if __name__ == '__main__':
     app.run(
         host='0.0.0.0',
