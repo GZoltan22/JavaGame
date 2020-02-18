@@ -4,18 +4,29 @@ body {
 
 div.Heromenu{
     position: absolute;
-    bottom: 3rem;
-    right: 4rem;
+    bottom: 5rem;
+    right: 6rem;
 }
 
 div.Dogmenu{
     position: absolute;
-    bottom: 3.8rem;
-    right: 13rem;
+    bottom: 6rem;
+    right: 22rem;
 }
 
-.start{
-        position: absolute;
-    bottom: 30rem;
-    right: 50rem;
+/*.start{*/
+/*    position: absolute;*/
+/*    bottom: 30rem;*/
+/*    right: 50rem;*/
+/*}*/
+
+.btn-huge{
+    position: absolute;
+    right: -73rem;
+    top: 45rem;
+    font-family: 'Press Start 2P', cursive;;
+    font-size: 35px;
+    /*bottom: 55rem;*/
+    /*padding-top:20px;*/
+    /*padding-bottom:20px;*/
 }
