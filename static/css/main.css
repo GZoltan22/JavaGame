@@ -72,7 +72,13 @@ text-align: center;
 }
 
 
-.btn-huge{
-    padding-top:20px;
-    padding-bottom:20px;
+.btn-huge {
+    /*position: absolute;*/
+    /*right: -5rem;*/
+    /*top: 5rem;*/
+    /*font-family: 'Press Start 2P', cursive;;*/
+    /*font-size: 11px;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Press Start 2P', cursive;
 }

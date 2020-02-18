@@ -1,0 +1,9 @@
+body {
+    background-image: url("bonfire_try.png");
+}
+
+div.bonfire{
+    position: absolute;
+    bottom: -0rem;
+    right: 37rem;
+}
