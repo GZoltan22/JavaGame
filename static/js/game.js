@@ -26,24 +26,28 @@ actual_word3.innerHTML = random_word();
 wordInput.addEventListener('input', (event)=> {
   if (actual_word1.innerHTML === event.target.value.toUpperCase()) {
     event.target.value = '';
-    actual_word1.innerHTML = random_word();
-    actual_word1.className = actual_word1.className.replace()
+    actual_word1.innerHTML = '';
+    let enemy = document.getElementById('first_enemy')
+    enemy.src = "static/css/rip.png";
+    // document.getElementById("first_enemy").id = "dead";
   }
 });
 
   wordInput.addEventListener('input', (event) => {
     if (actual_word2.innerHTML === event.target.value.toUpperCase()) {
-      console.log('kutya');
       event.target.value = '';
-      actual_word2.innerHTML = random_word()
+    actual_word2.innerHTML = '';
+    let enemy = document.getElementById('second_enemy')
+    enemy.remove()
     }
   });
 
   wordInput.addEventListener('input', (event) => {
     if (actual_word3.innerHTML === event.target.value.toUpperCase()) {
-      console.log('kutya');
       event.target.value = '';
-      actual_word3.innerHTML = random_word()
+    actual_word3.innerHTML = '';
+    let enemy = document.getElementById('third_enemy')
+    enemy.remove()
     }
   });
 
