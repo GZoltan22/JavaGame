@@ -43,7 +43,7 @@ wordInput.addEventListener('input', (event)=> {
     let enemy = document.getElementById('second_enemy');
     let enemy_div = document.getElementById('enemy2');
     enemy_div.id = ('dead');
-    enemy.id = ('dead')
+    enemy.id = ('dead');
     enemy.src = "static/css/rip.png";
     win_check()
     }
@@ -56,15 +56,15 @@ wordInput.addEventListener('input', (event)=> {
     let enemy = document.getElementById('third_enemy');
     let enemy_div = document.getElementById('enemy3');
     enemy_div.id = ('dead');
-    enemy.id = ('dead')
+    enemy.id = ('dead');
     enemy.src = "static/css/rip.png";
     win_check()
     }
   });
 
   function win_check() {
-    let rips = document.querySelectorAll('#dead')
-    console.log(rips)
+    let rips = document.querySelectorAll('#dead');
+    console.log(rips);
     if (rips.length / 2 === 3) {
       window.history.back()
     }

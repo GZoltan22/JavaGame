@@ -60,3 +60,13 @@ div#enemy3{
 	from {right: -10%;}	/*off-screen left (adjust for image width)*/
 	to {right:90%;}		/*off-screen right*/
 	}
+.carousel-inner > .carousel-item > img {
+    width:640px;
+  height:360px;
+    margin-bottom: auto;
+}
+
+
+h1{
+text-align: center;
+}
