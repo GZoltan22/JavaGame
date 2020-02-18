@@ -27,9 +27,12 @@ wordInput.addEventListener('input', (event)=> {
   if (actual_word1.innerHTML === event.target.value.toUpperCase()) {
     event.target.value = '';
     actual_word1.innerHTML = '';
-    let enemy = document.getElementById('first_enemy')
+    let enemy = document.getElementById('first_enemy');
+    let enemy_div = document.getElementById('enemy1');
+    enemy_div.id = ('dead');
+    enemy.id = ('dead')
     enemy.src = "static/css/rip.png";
-    // document.getElementById("first_enemy").id = "dead";
+    win_check()
   }
 });
 
@@ -37,8 +40,12 @@ wordInput.addEventListener('input', (event)=> {
     if (actual_word2.innerHTML === event.target.value.toUpperCase()) {
       event.target.value = '';
     actual_word2.innerHTML = '';
-    let enemy = document.getElementById('second_enemy')
-    enemy.remove()
+    let enemy = document.getElementById('second_enemy');
+    let enemy_div = document.getElementById('enemy2');
+    enemy_div.id = ('dead');
+    enemy.id = ('dead')
+    enemy.src = "static/css/rip.png";
+    win_check()
     }
   });
 
@@ -46,15 +53,25 @@ wordInput.addEventListener('input', (event)=> {
     if (actual_word3.innerHTML === event.target.value.toUpperCase()) {
       event.target.value = '';
     actual_word3.innerHTML = '';
-    let enemy = document.getElementById('third_enemy')
-    enemy.remove()
+    let enemy = document.getElementById('third_enemy');
+    let enemy_div = document.getElementById('enemy3');
+    enemy_div.id = ('dead');
+    enemy.id = ('dead')
+    enemy.src = "static/css/rip.png";
+    win_check()
     }
   });
 
+  function win_check() {
+    let rips = document.querySelectorAll('#dead')
+    console.log(rips)
+    if (rips.length / 2 === 3) {
+      window.history.back()
+    }
+  }
 
   function random_word() {
     let random_index = Math.floor(Math.random() * 112);
-    let chosen_word = list[random_index];
-    return chosen_word;
+    return list[random_index]
   }
 

@@ -2,8 +2,19 @@ body {
     background-image: url("pixel_background.jpg");
 }
 
+.input {
+    background: url('bubble.png') center center no-repeat;
+    width: 150px;
+    position: fixed;
+    bottom: 225px;
+    left: 50px;
+}
+
 #dead {
-    position: absolute;
+    position: relative;
+    width: 50px;
+    length: 50px;
+    bottom: 0;
 }
 
 #hero{
