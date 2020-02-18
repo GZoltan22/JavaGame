@@ -25,32 +25,53 @@ actual_word3.innerHTML = random_word();
 
 wordInput.addEventListener('input', (event)=> {
   if (actual_word1.innerHTML === event.target.value.toUpperCase()) {
-    console.log('kutya');
     event.target.value = '';
-    actual_word1.innerHTML = random_word();
-    random_word()
+    actual_word1.innerHTML = '';
+    let enemy = document.getElementById('first_enemy');
+    let enemy_div = document.getElementById('enemy1');
+    enemy_div.id = ('dead');
+    enemy.id = ('dead');
+    enemy.src = "static/css/rip.png";
+    win_check()
   }
 });
 
   wordInput.addEventListener('input', (event) => {
     if (actual_word2.innerHTML === event.target.value.toUpperCase()) {
-      console.log('kutya');
       event.target.value = '';
-      actual_word2.innerHTML = random_word()
+    actual_word2.innerHTML = '';
+    let enemy = document.getElementById('second_enemy');
+    let enemy_div = document.getElementById('enemy2');
+    enemy_div.id = ('dead');
+    enemy.id = ('dead');
+    enemy.src = "static/css/rip.png";
+    win_check()
     }
   });
 
   wordInput.addEventListener('input', (event) => {
     if (actual_word3.innerHTML === event.target.value.toUpperCase()) {
-      console.log('kutya');
       event.target.value = '';
-      actual_word3.innerHTML = random_word()
+    actual_word3.innerHTML = '';
+    let enemy = document.getElementById('third_enemy');
+    let enemy_div = document.getElementById('enemy3');
+    enemy_div.id = ('dead');
+    enemy.id = ('dead');
+    enemy.src = "static/css/rip.png";
+    win_check()
     }
   });
 
+  function win_check() {
+    let rips = document.querySelectorAll('#dead');
+    console.log(rips);
+    if (rips.length / 2 === 3) {
+      window.history.back()
+    }
+  }
 
   function random_word() {
     let random_index = Math.floor(Math.random() * 112);
-    return list[random_index];
+    return list[random_index]
   }
 
