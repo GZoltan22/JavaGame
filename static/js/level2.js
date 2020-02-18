@@ -1,4 +1,4 @@
- const list = ['ACCOUNT','ACCURATE','ACRES','ACROSS','ACT','ACTION','ACTIVE','ACTIVITY',
+const list = ['ACCOUNT','ACCURATE','ACRES','ACROSS','ACT','ACTION','ACTIVE','ACTIVITY',
   'ACTUAL','ACTUALLY','ADD','ADDITION','ADDITIONAL','ADJECTIVE','ADULT','ADVENTURE',
   'ADVICE','AFFECT','AFRAID','AFTER','AFTERNOON','AGAIN','AGAINST','AGE',
   'AGO','AGREE','AHEAD','AID','AIR','AIRPLANE','ALIKE','ALIVE',
@@ -16,12 +16,16 @@
 let actual_word1 = document.querySelector('.words1');
 let actual_word2 = document.querySelector('.words2');
 let actual_word3 = document.querySelector('.words3');
+let actual_word4 = document.querySelector('.words4');
+let actual_word5 = document.querySelector('.words5');
+
 let wordInput = document.querySelector('.input');
 
 actual_word1.innerHTML = random_word();
 actual_word2.innerHTML = random_word();
 actual_word3.innerHTML = random_word();
-
+actual_word4.innerHTML = random_word();
+actual_word5.innerHTML = random_word();
 
 wordInput.addEventListener('input', (event)=> {
   if (actual_word1.innerHTML === event.target.value.toUpperCase()) {
@@ -62,12 +66,38 @@ wordInput.addEventListener('input', (event)=> {
     }
   });
 
+  wordInput.addEventListener('input', (event) => {
+    if (actual_word4.innerHTML === event.target.value.toUpperCase()) {
+      event.target.value = '';
+    actual_word4.innerHTML = '';
+    let enemy = document.getElementById('fourth_enemy');
+    let enemy_div = document.getElementById('enemy4');
+    enemy_div.id = ('dead');
+    enemy.id = ('dead');
+    enemy.src = "/static/css/rip.png";
+    win_check()
+    }
+  });
+
+  wordInput.addEventListener('input', (event) => {
+    if (actual_word5.innerHTML === event.target.value.toUpperCase()) {
+      event.target.value = '';
+    actual_word5.innerHTML = '';
+    let enemy = document.getElementById('fifth_enemy');
+    let enemy_div = document.getElementById('enemy5');
+    enemy_div.id = ('dead');
+    enemy.id = ('dead');
+    enemy.src = "/static/css/rip.png";
+    win_check()
+    }
+  });
+
   function win_check() {
     let rips = document.querySelectorAll('#dead');
     console.log(rips);
-    if (rips.length / 2 === 3) {
-      alert('Congrats Champion!');
-      window.location.assign("/game_medium");
+    if (rips.length / 2 === 5) {
+      alert('Beware Champion, the Final Boss is coming!!');
+      window.location.assign("/final_level");
     }
   }
 
@@ -75,4 +105,3 @@ wordInput.addEventListener('input', (event)=> {
     let random_index = Math.floor(Math.random() * 112);
     return list[random_index]
   }
-
