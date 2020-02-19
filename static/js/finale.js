@@ -60,7 +60,7 @@ wordInput.addEventListener('input', (event) => {
       let enemy = document.getElementById('second_enemy');
     let enemy_div = document.getElementById('enemy2');
     enemy_div.id = ('ripdog');
-    enemy.id = ('second_enemy');
+    // enemy.id = ('second_enemy');
     enemy.src = "/static/css/rip.png";
     }
   });

@@ -5,13 +5,19 @@ body {
 .input {
     /*background: url('bubble.png') center center no-repeat;*/
     width: 150px;
+    height: 45px;
     position: fixed;
-    bottom: 220px;
-    left: 50px;
+    bottom: 226px;
+    left: 90px;
+    border-color: white;
 }
 
 .text img{
-    width: 100%;
+    height: 290px;
+    width: 205px;
+    position: fixed;
+    bottom: 60px;
+    left: 53px;
 }
 
 #dead {
@@ -41,6 +47,7 @@ div#enemy1, div#enemy2, div#enemy3 {
     font-size: 34px;
     animation: mymove 10s normal; /* total animation time for each image is 8 seconds, loops forever */
     animation-direction: normal;
+    animation-timing-function: linear;
 }
 
 div#enemy1{
