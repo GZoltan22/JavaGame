@@ -24,38 +24,32 @@ let checker = 0;
 
 wordInput.addEventListener('input', (event)=> {
   if (actual_word1.innerHTML === event.target.value.toUpperCase()) {
-    event.target.value = '';
-    checker = checker + 1;
-    actual_word1.innerHTML = random_word();
-    if (checker % 2 === 0) {
-        let dog = document.querySelector('#second_enemy');
-        let dog_div = document.querySelector('#ripdog');
-        let rip = "http://0.0.0.0:8000/static/css/rip.png";
-        if (dog.src === rip) {
-            dog.src = "/static/css/bossdoggo.gif";
-            dog_div.id = "enemy2";
-            actual_word2.innerHTML = random_word();
-        }
-        else {
-            dog.src = "/static/css/rip.png";
-            dog_div.id = "ripdog";
-        }
-    }
-    if (checker === 5) {
-        alert('G--->G tesó');
-        window.location.assign("/");
-
-    }
+      event.target.value = '';
+      checker = checker + 1;
+      actual_word1.innerHTML = random_word();
+          let dog = document.querySelector('#second_enemy');
+          let dog_div = document.querySelector('#ripdog');
+          let rip = "http://0.0.0.0:8000/static/css/rip.png";
+          if (dog.src === rip) {
+              dog.src = "/static/css/bossdoggo.gif";
+              dog_div.id = "enemy2";
+              actual_word2.innerHTML = random_word();
+           }
+      if (checker === 5) {
+          alert('G--->G tesó');
+          window.location.assign("/");
+      }
+  }
 });
 
-  wordInput.addEventListener('input', (event) => {
+wordInput.addEventListener('input', (event) => {
     if (actual_word2.innerHTML === event.target.value.toUpperCase()) {
       event.target.value = '';
-    actual_word2.innerHTML = '';
-    let enemy = document.getElementById('second_enemy');
+      actual_word2.innerHTML = '';
+      let enemy = document.getElementById('second_enemy');
     let enemy_div = document.getElementById('enemy2');
     enemy_div.id = ('ripdog');
-    enemy.id = ('ripdog');
+    enemy.id = ('second_enemy');
     enemy.src = "/static/css/rip.png";
     }
   });
