@@ -42,7 +42,7 @@ body {
     right: 350px;
     position: absolute;
 }
-#enemy3 {
+#kiszombie {
     transform: rotateY(180deg);
 }
 div#enemy3 {
