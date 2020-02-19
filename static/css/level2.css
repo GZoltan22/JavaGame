@@ -1,17 +1,13 @@
 body {
-    background-image: url("pixel_background.jpg");
+    background-image: url("character_choose_bg.jpg");
 }
 
 .input {
     /*background: url('bubble.png') center center no-repeat;*/
     width: 150px;
     position: fixed;
-    bottom: 220px;
+    bottom: 225px;
     left: 50px;
-}
-
-.text img{
-    width: 100%;
 }
 
 #dead {
@@ -28,40 +24,47 @@ body {
     transform: rotateY(180deg);
 }
 
-#first_enemy, #second_enemy, #third_enemy{
+#first_enemy, #second_enemy, #third_enemy, #fourth_enemy, #fifth_enemy {
     transform: rotateY(180deg);
         width: 200px;
 }
 
-/*div#enemy1, div#enemy2, div#enemy3 {*/
-/*    position: absolute;*/
-/*    bottom: 0;*/
-/*    right: -100px;*/
-/*    text-align: center;*/
-/*    font-size: 34px;*/
-/*}*/
+div#enemy1, div#enemy2, div#enemy3, div#enemy4, div#enemy5 {
+    position: absolute;
+    bottom: 0;
+    right: -1000px;
+    text-align: center;
+    font-size: 34px;
+}
 
 /*div#enemy1{*/
 /*    animation-delay:0s;*/
 /*    -webkit-animation-delay: 0s;*/
 /*}*/
 
-div#enemy2{
-    animation-delay:4s;
-    -webkit-animation-delay: 4s;
-}
+/*div#enemy2{*/
+/*    animation-delay:2s;*/
+/*    -webkit-animation-delay: 2s;*/
+/*}*/
 
-div#enemy3{
-    animation-delay:8s;
-    -webkit-animation-delay: 8s;
-}
+/*div#enemy3{*/
+/*    animation-delay:4s;*/
+/*    -webkit-animation-delay: 4s;*/
+/*}*/
+/*div#enemy4{*/
+/*    animation-delay:6s;*/
+/*    -webkit-animation-delay: 6s;*/
+/*}*/
+/*div#enemy5{*/
+/*    animation-delay:9s;*/
+/*    -webkit-animation-delay: 9s;*/
+/*}*/
 
 
-/*@-webkit-keyframes mymove*/
+/*@keyframes mymove*/
 /*	{*/
 /*	from {right: -10%;}	!*off-screen left (adjust for image width)*!*/
-/*	to {right:80%;}		!*off-screen right*!*/
-/*    animation-play-state: paused;*/
+/*	to {right:90%;}		!*off-screen right*!*/
 /*	}*/
 .carousel-inner > .carousel-item > img {
     width:640px;
@@ -72,29 +75,6 @@ div#enemy3{
 
 h1{
 text-align: center;
-}
-
-#enemy1{
-    position: absolute;
-    bottom: 0;
-    right: -100px;
-    text-align: center;
-    font-size: 34px;
-}
-#enemy2{
-    position: absolute;
-    bottom: 0;
-    right: -100px;
-    text-align: center;
-    font-size: 34px;
-}
-
-#enemy3{
-    position: absolute;
-    bottom: 0;
-    right: -100px;
-    text-align: center;
-    font-size: 34px;
 }
 
 
@@ -108,4 +88,3 @@ text-align: center;
     padding-bottom: 10px;
     font-family: 'Press Start 2P', cursive;
 }
-

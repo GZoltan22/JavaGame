@@ -12,3 +12,13 @@ h1{
 text-align: center;
     font-family: 'Press Start 2P', cursive;
 }
+
+.btn-huge {
+    /*position: absolute;*/
+    /*right: -5rem;*/
+    /*top: 5rem;*/
+    /*font-family: 'Press Start 2P', cursive;;*/
+    /*font-size: 11px;*/
+    padding-top: 0px;
+    padding-bottom: 1000px;
+    font-family: 'Press Start 2P', cursive;

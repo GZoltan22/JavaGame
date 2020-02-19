@@ -3,6 +3,7 @@ import bcrypt
 
 app = Flask(__name__)
 
+chosen_hero = None
 
 @app.route('/')
 def main():
@@ -10,20 +11,40 @@ def main():
 
 @app.route('/game_easy/<int:id>')
 def game_easy(id=None):
+    global chosen_hero
     if id == 1 :
         hero = "../static/css/magicguy.gif"
+        chosen_hero = hero
         return render_template('index.html',character=hero)
     elif id == 2 :
+        chosen_hero = "../static/css/sorcerer.gif"
         return render_template('index.html',character="../static/css/sorcerer.gif")
     elif id == 3 :
+        chosen_hero = "../static/css/necromancer.gif"
         return render_template('index.html',character="../static/css/necromancer.gif")
     else:
+        chosen_hero = "../static/css/paladin.gif"
         return render_template('index.html',character="../static/css/paladin.gif")
     return render_template('index.html')
+
+@app.route('/game_medium')
+def level_2():
+    global chosen_hero
+    return render_template('level2.html', character=chosen_hero)
+
+@app.route('/final_level')
+def final_stage():
+    global chosen_hero
+    return render_template('finale.html', character=chosen_hero)
 
 @app.route('/choose-character')
 def character():
     return render_template('character.html')
+
+
+@app.route('/end')
+def end():
+    return render_template('end.html')
 
 
 if __name__ == '__main__':
