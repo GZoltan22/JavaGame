@@ -19,7 +19,7 @@ body {
     left: 53px;
 }
 
-.words1, .words2 {
+.words1, .words2, .words3 {
     font-size: 30px;
     color: white;
 }
@@ -46,6 +46,27 @@ body {
     position: absolute;
     width: 150px;
 }
+#zombiehand {
+    bottom: -30px;
+    right: 350px;
+    position: absolute;
+}
+#enemy3 {
+    transform: rotateY(180deg);
+}
+div#enemy3 {
+    position: absolute;
+    bottom: 0;
+    right: 350px;
+    text-align: center;
+    font-size: 34px;
+    animation: mymove 10s infinite; /* total animation time for each image is 8 seconds, loops forever */
+    animation-direction: normal;
+}
+div#enemy3 {
+    animation-delay:0s;
+    -webkit-animation-delay: 0s;
+}
 
 #second_enemy {
         width: 150px;
@@ -58,7 +79,7 @@ div#enemy2 {
     right: -1000px;
     text-align: center;
     font-size: 34px;
-    animation: mymove 10s infinite; /* total animation time for each image is 8 seconds, loops forever */
+    animation: mymove 10s normal; /* total animation time for each image is 8 seconds, loops forever */
     animation-direction: normal;
 }
 
