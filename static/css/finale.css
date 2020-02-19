@@ -68,3 +68,15 @@ div#enemy2{
   height:360px;
     margin-bottom: auto;
 }
+
+
+.btn-huge {
+    /*position: absolute;*/
+    /*right: -5rem;*/
+    /*top: 5rem;*/
+    /*font-family: 'Press Start 2P', cursive;;*/
+    /*font-size: 11px;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Press Start 2P', cursive;
+}
