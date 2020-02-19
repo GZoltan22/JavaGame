@@ -18,6 +18,7 @@ let actual_word2 = document.querySelector('.words2');
 let actual_word3 = document.querySelector('.words3');
 let wordInput = document.querySelector('.input');
 
+
 actual_word1.innerHTML = random_word();
 actual_word2.innerHTML = random_word();
 actual_word3.innerHTML = random_word();
@@ -75,4 +76,3 @@ wordInput.addEventListener('input', (event)=> {
     let random_index = Math.floor(Math.random() * 112);
     return list[random_index]
   }
-

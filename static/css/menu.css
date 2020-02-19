@@ -30,3 +30,11 @@ div.Dogmenu{
     /*padding-top:20px;*/
     /*padding-bottom:20px;*/
 }
+
+div.tbubble img{
+    position: absolute;
+    width: 15rem;
+    bottom: 13rem;
+    right: 23rem;
+}
+
