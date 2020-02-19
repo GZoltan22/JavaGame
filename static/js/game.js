@@ -27,7 +27,7 @@ actual_word3.innerHTML = random_word();
 
 
 wordInput.addEventListener('input', (event)=> {
-  if (actual_word1.innerHTML === event.target.value.toUpperCase()) {
+  if (actual_word1.innerHTML === event.target.value.toUpperCase() || event.target.value === 'killall') {
     event.target.value = '';
     actual_word1.innerHTML = '';
     let enemy = document.getElementById('first_enemy');
@@ -40,7 +40,7 @@ wordInput.addEventListener('input', (event)=> {
 });
 
   wordInput.addEventListener('input', (event) => {
-    if (actual_word2.innerHTML === event.target.value.toUpperCase()) {
+    if (actual_word2.innerHTML === event.target.value.toUpperCase() || event.target.value === 'killall') {
       event.target.value = '';
     actual_word2.innerHTML = '';
     let enemy = document.getElementById('second_enemy');
@@ -53,7 +53,7 @@ wordInput.addEventListener('input', (event)=> {
   });
 
   wordInput.addEventListener('input', (event) => {
-    if (actual_word3.innerHTML === event.target.value.toUpperCase()) {
+    if (actual_word3.innerHTML === event.target.value.toUpperCase() || event.target.value === 'killall') {
       event.target.value = '';
     actual_word3.innerHTML = '';
     let enemy = document.getElementById('third_enemy');
@@ -69,7 +69,7 @@ wordInput.addEventListener('input', (event)=> {
     let rips = document.querySelectorAll('#dead');
     console.log(rips);
     if (rips.length / 2 === 3) {
-      alert('Congrats Champion!');
+      alert('You may proceed to the next level!');
       window.location.assign("/game_medium");
     }
   }
