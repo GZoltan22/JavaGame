@@ -10,6 +10,12 @@ body {
     left: 50px;
 }
 
+.words1, .words2, .words3, .words4, .words5 {
+    color: white;
+    text-align: center;
+    font-size: 34px;
+}
+
 #dead {
     position: relative;
     width: 50px;
@@ -33,9 +39,7 @@ div#enemy1, div#enemy2, div#enemy3, div#enemy4, div#enemy5 {
     position: absolute;
     bottom: 0;
     right: -1000px;
-    text-align: center;
-    font-size: 34px;
-    animation: mymove 15s infinite; /* total animation time for each image is 8 seconds, loops forever */
+    animation: mymove 15s normal; /* total animation time for each image is 8 seconds, loops forever */
     animation-direction: normal;
 }
 
@@ -66,7 +70,7 @@ div#enemy5{
 @keyframes mymove
 	{
 	from {right: -10%;}	/*off-screen left (adjust for image width)*/
-	to {right:90%;}		/*off-screen right*/
+	to {right: 80%;}		/*off-screen right*/
 	}
 .carousel-inner > .carousel-item > img {
     width:640px;
