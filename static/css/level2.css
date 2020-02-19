@@ -6,8 +6,17 @@ body {
     /*background: url('bubble.png') center center no-repeat;*/
     width: 150px;
     position: fixed;
-    bottom: 225px;
-    left: 50px;
+    bottom: 226px;
+    left: 90px;
+    border-color: white;
+}
+
+.text img {
+    height: 290px;
+    width: 205px;
+    position: fixed;
+    bottom: 60px;
+    left: 53px;
 }
 
 #dead {

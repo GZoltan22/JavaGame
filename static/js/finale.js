@@ -37,7 +37,7 @@ wordInput.addEventListener('input', (event)=> {
            }
       if (checker === 5) {
           alert('G--->G tesó');
-          window.location.assign("/");
+          window.location.assign("/end");
       }
   }
 });
