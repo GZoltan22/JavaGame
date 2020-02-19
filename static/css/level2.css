@@ -3,7 +3,7 @@ body {
 }
 
 .input {
-    background: url('bubble.png') center center no-repeat;
+    /*background: url('bubble.png') center center no-repeat;*/
     width: 150px;
     position: fixed;
     bottom: 225px;
