@@ -57,7 +57,7 @@ wordInput.addEventListener('input', (event) => {
     if (actual_word2.innerHTML === event.target.value.toUpperCase()) {
       event.target.value = '';
       actual_word2.innerHTML = '';
-      let enemy = document.getElementById('second_enemy');
+    let enemy = document.getElementById('second_enemy');
     let enemy_div = document.getElementById('enemy2');
     enemy_div.id = ('ripdog');
     // enemy.id = ('second_enemy');
@@ -80,3 +80,26 @@ wordInput.addEventListener('input', (event) => {
     let random_index = Math.floor(Math.random() * 112);
     return list[random_index]
   }
+
+
+ function moveZombie1() {
+  let zombie1 = document.getElementById("ripdog");
+  let pos = 0;
+  let zombie1IsDead = document.getElementById("second_enemy");
+  let id = setInterval(frame, 5);
+  function frame() {
+      if (pos === 1600 ) {
+        gameOver();
+      }
+      else if (zombie1IsDead.id === ('dead')) {
+        clearInterval(frame);
+      }
+      else {
+        pos = pos + 2;
+        zombie1.style.right = pos + "px";
+      }
+    }
+ }
+function gameOver(){
+   alert('GAME OVER')
+ }
