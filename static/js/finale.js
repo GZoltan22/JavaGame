@@ -26,6 +26,7 @@ let checker = 0;
 let fireball_div = document.querySelector('#fireball-do-nothing');
 let fireball_gif = document.querySelector('#fireball_no');
 
+let audio = new Audio('/static/css/Evil_laugh_sound_effect.mp3');
 
 wordInput.addEventListener('input', (event)=> {
   if (actual_word1.innerHTML === event.target.value.toUpperCase()) {
@@ -98,10 +99,11 @@ wordInput.addEventListener('input', (event) => {
 
 for (var i = 0; i < enemy_divs.length; i++) {
     enemy_divs[i].addEventListener('animationend', (ev)=>{
-      alert('Game Over!')
+    audio.play();
+      alert('Game Over!');
       window.location.assign("/");
     });
-  };
+  }
 
 
   function random_word() {
