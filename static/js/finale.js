@@ -58,9 +58,10 @@ wordInput.addEventListener('input', (event) => {
     if (actual_word2.innerHTML === event.target.value.toUpperCase()) {
       event.target.value = '';
       actual_word2.innerHTML = '';
-      let enemy = document.getElementById('second_enemy');
+    let enemy = document.getElementById('second_enemy');
     let enemy_div = document.getElementById('enemy2');
     enemy_div.id = ('ripdog');
+    // enemy.id = ('second_enemy');
     enemy.src = "/static/css/rip.png";
     }
   });
