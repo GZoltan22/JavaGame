@@ -56,9 +56,9 @@ wordInput.addEventListener('input', (event)=> {
       };
       if (checker === 5) {
           alert('G ----> G');
-          window.location.assign("/");
-      };
-  };
+          window.location.assign("/end");
+      }
+  }
 });
 
 wordInput.addEventListener('input', (event) => {
