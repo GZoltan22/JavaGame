@@ -9,8 +9,10 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <title>Main Menu</title>
-    <script src="static/js/menu.js" defer></script>
+    <script src="/static/js/menu.js" defer></script>
     <link rel="stylesheet" type="text/css" href="/static/css/menu.css">
+    <script src="/static/js/menu.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
 </head>
 <body class="mainmenu">
 
@@ -27,17 +29,20 @@
 <!--</div>-->
 
 <div class="tbubble">
-    <img class="tbubble" src="static/css/bubble_wau.png">
+    <img class="tbubble" src="/static/css/bubble_wau.png">
 </div>
 
 
 
 <div class="Heromenu">
-    <img src="static/css/heromainmenu.gif">
+    <img src="/static/css/heromainmenu.gif">
 </div>
 
 <div class="Dogmenu">
-    <img class="Dogmenu" width='145rem', src="static/css/dogmainmenu.gif">
+    <audio id="myAudio">
+  <source src="/static/css/barking.mp3" type="audio/mpeg">
+    </audio>
+    <img class="Dogmenu" onclick="playaudio()" width='145rem', src="static/css/dogmainmenu.gif">
 </div>
 
 
