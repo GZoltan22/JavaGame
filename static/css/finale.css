@@ -102,7 +102,7 @@ div#fireball-do-thing {
     text-align: center;
 }
 div#fireball-do-thing {
-    animation-delay: 0.2s;
+    animation-delay: 0s;
 }
 @keyframes fireballmove
 	{
