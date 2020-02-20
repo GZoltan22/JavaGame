@@ -162,6 +162,8 @@ let actual_word2 = document.querySelector('.words2');
 let actual_word3 = document.querySelector('.words3');
 let actual_word4 = document.querySelector('.words4');
 let actual_word5 = document.querySelector('.words5');
+let image = document.querySelector('#health_pic');
+let health_checker = 0;
 
 let wordInput = document.querySelector('.input');
 let enemy_divs = document.querySelectorAll('div');
