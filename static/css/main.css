@@ -23,7 +23,6 @@ body {
 #dead {
     position: relative;
     width: 50px;
-    length: 50px;
     bottom: 0;
 }
 
@@ -39,18 +38,21 @@ body {
         width: 200px;
 }
 
-/*div#enemy1, div#enemy2, div#enemy3 {*/
-/*    position: absolute;*/
-/*    bottom: 0;*/
-/*    right: -100px;*/
-/*    text-align: center;*/
-/*    font-size: 34px;*/
-/*}*/
+div#enemy1, div#enemy2, div#enemy3 {
+    position: absolute;
+    bottom: 0;
+    right: -1000px;
+    text-align: center;
+    font-size: 34px;
+    animation: mymove 10s normal; 
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
 
-/*div#enemy1{*/
-/*    animation-delay:0s;*/
-/*    -webkit-animation-delay: 0s;*/
-/*}*/
+div#enemy1{
+   animation-delay:0s;
+   -webkit-animation-delay: 0s;
+}
 
 div#enemy2{
     animation-delay:4s;
@@ -63,12 +65,12 @@ div#enemy3{
 }
 
 
-/*@-webkit-keyframes mymove*/
-/*	{*/
-/*	from {right: -10%;}	!*off-screen left (adjust for image width)*!*/
-/*	to {right:80%;}		!*off-screen right*!*/
-/*    animation-play-state: paused;*/
-/*	}*/
+@-webkit-keyframes mymove
+	{
+	from {right: -10%;}
+	to {right:80%;}		
+   animation-play-state: paused;
+	}
 .carousel-inner > .carousel-item > img {
     width:640px;
   height:360px;

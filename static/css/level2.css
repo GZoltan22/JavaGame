@@ -49,39 +49,48 @@ div#enemy1, div#enemy2, div#enemy3, div#enemy4, div#enemy5 {
     position: absolute;
     bottom: 0;
     right: -1000px;
+    animation: mymove 15s normal; /* total animation time for each image is 8 seconds, loops forever */
+    animation-direction: normal;
+    animation-timing-function: linear;
     text-align: center;
     font-size: 34px;
 }
 
-/*div#enemy1{*/
-/*    animation-delay:0s;*/
-/*    -webkit-animation-delay: 0s;*/
-/*}*/
+div#enemy1{
+   animation-delay:0s;
+   -webkit-animation-delay: 0s;
+}
 
-/*div#enemy2{*/
-/*    animation-delay:2s;*/
-/*    -webkit-animation-delay: 2s;*/
-/*}*/
+div#enemy2{
+   animation-delay:2s;
+   -webkit-animation-delay: 2s;
+}
 
-/*div#enemy3{*/
-/*    animation-delay:4s;*/
-/*    -webkit-animation-delay: 4s;*/
-/*}*/
-/*div#enemy4{*/
-/*    animation-delay:6s;*/
-/*    -webkit-animation-delay: 6s;*/
-/*}*/
-/*div#enemy5{*/
-/*    animation-delay:9s;*/
-/*    -webkit-animation-delay: 9s;*/
-/*}*/
+div#enemy3{
+   animation-delay:4s;
+   -webkit-animation-delay: 4s;
+}
+div#enemy4{
+   animation-delay:6s;
+   -webkit-animation-delay: 6s;
+}
+div#enemy5{
+   animation-delay:9s;
+   -webkit-animation-delay: 9s;
+}
 
+@keyframes mymove
+	{
+	from {right: -10%;}	/*off-screen left (adjust for image width)*/
+	to {right: 79%;}		/*off-screen right*/
+	}
 
-/*@keyframes mymove*/
-/*	{*/
-/*	from {right: -10%;}	!*off-screen left (adjust for image width)*!*/
-/*	to {right:90%;}		!*off-screen right*!*/
-/*	}*/
+@keyframes mymove
+	{
+	from {right: -10%;}
+  to {right:90%;}	
+	}
+
 .carousel-inner > .carousel-item > img {
     width:640px;
   height:360px;
