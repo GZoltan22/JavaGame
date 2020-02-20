@@ -44,7 +44,7 @@ div#enemy1, div#enemy2, div#enemy3 {
     right: -1000px;
     text-align: center;
     font-size: 34px;
-    animation: mymove 10s normal;
+    animation: mymove 8s normal;
     animation-direction: normal;
     animation-timing-function: linear;
 }
@@ -68,7 +68,7 @@ div#enemy3{
 @-webkit-keyframes mymove
 	{
 	from {right: -10%;}
-	to {right:80%;}
+	to {right:80%;}		
    animation-play-state: paused;
 	}
 .carousel-inner > .carousel-item > img {
