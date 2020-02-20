@@ -40,7 +40,7 @@ wordInput.addEventListener('input', (event)=> {
           let zombie_div = document.getElementById('zombiehand')
           let zombiehand_src = "http://0.0.0.0:8000/static/css/zombiehand.png"
           if (zombie.src === zombiehand_src) {
-              console.log('kutya')
+              console.log('kutya');
               zombie.src = "/static/css/zombie4.gif";
               zombie_div.id = 'enemy3';
               actual_word3.innerHTML = random_word();
