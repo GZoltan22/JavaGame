@@ -171,7 +171,11 @@ let checker = 0;
 
 let fireball_div = document.querySelector('#fireball-do-nothing');
 let fireball_gif = document.querySelector('#fireball_no');
+let full_globe = document.querySelector('full_health');
+let half_globe = document.querySelector('half_health');
+let empty = document.querySelector('died');
 
+let finish_him = new Audio('/static/css/finish_him.mp3');
 let audio = new Audio('/static/css/Evil_laugh_sound_effect.mp3');
 
 wordInput.addEventListener('input', (event)=> {
@@ -201,6 +205,10 @@ wordInput.addEventListener('input', (event)=> {
               actual_word3.innerHTML = random_word();
           };
       };
+      if (checker === 4) {
+      finish_him.play();
+      }
+
       if (checker === 5) {
           alert('You can rest now, champion!');
           window.location.assign("/end");
@@ -242,12 +250,27 @@ wordInput.addEventListener('input', (event) => {
     }
   });
 
+half_globe.style.visibility = 'hidden';
+empty.style.visibility = 'hidden';
+
+let health_checker = 0;
 
 for (var i = 0; i < enemy_divs.length; i++) {
     enemy_divs[i].addEventListener('animationend', (ev)=>{
     audio.play();
       alert('Game Over!');
       window.location.assign("/");
+        health_checker++;
+      if (health_checker === 1) {
+          full_globe.style.visibility = 'hidden';
+          half_globe.style.visibility = 'visible';
+      }
+      if (health_checker === 2) {
+          half_globe.style.visibility = 'hidden';
+          empty.style.visibility = 'visible';
+          alert('Game Over!');
+          window.location.assign("/");
+      }
     });
   }
 

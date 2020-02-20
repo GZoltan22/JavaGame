@@ -8,3 +8,9 @@ doggo.addEventListener('click', (event)=>{
     setTimeout(function(){ think.style.visibility = 'hidden' }, 3000);
 });
 
+var barking = document.getElementById("myAudio");
+function playaudio() {
+    console.log('barking');
+    barking.play();
+}
+

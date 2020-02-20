@@ -135,7 +135,7 @@ div#enemy3{
 	from {right: 0%;}	/*off-screen left (adjust for image width)*/
 	to {right:85%;}		/*off-screen right*/
 	}
-    
+
 .carousel-inner > .carousel-item > img {
     width:640px;
   height:360px;
@@ -148,4 +148,28 @@ div#enemy3{
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: 'Press Start 2P', cursive;
+}
+
+.full_health img{
+    position:absolute;
+    top: 65px;
+    left: 30px;
+    height: 200px;
+    width: 250px;
+}
+
+.half_health img{
+    position:absolute;
+    top: 65px;
+    left: 30px;
+    height: 200px;
+    width: 250px;
+}
+
+.died img{
+    position:absolute;
+    top: 65px;
+    left: 30px;
+    height: 200px;
+    width: 250px;
 }
