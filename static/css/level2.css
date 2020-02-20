@@ -49,7 +49,7 @@ div#enemy1, div#enemy2, div#enemy3, div#enemy4, div#enemy5 {
     position: absolute;
     bottom: 0;
     right: -1000px;
-    animation: mymove 15s normal; /* total animation time for each image is 8 seconds, loops forever */
+    animation: mymove 10s normal; /* total animation time for each image is 8 seconds, loops forever */
     animation-direction: normal;
     animation-timing-function: linear;
     text-align: center;
