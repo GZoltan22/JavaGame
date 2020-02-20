@@ -253,9 +253,7 @@ let health_checker = 0;
 for (var i = 0; i < enemy_divs.length; i++) {
     enemy_divs[i].addEventListener('animationend', (ev)=>{
     audio.play();
-      alert('Game Over!');
-      window.location.assign("/");
-        health_checker++;
+        health_checker = health_checker + 1;
       if (health_checker === 1) {
           full_globe.style.visibility = 'hidden';
           half_globe.style.visibility = 'visible';
@@ -265,9 +263,9 @@ for (var i = 0; i < enemy_divs.length; i++) {
           empty.style.visibility = 'visible';
           alert('Game Over!');
           window.location.assign("/");
-      }
+      };
     });
-  }
+  };
 
 
   function random_word() {
