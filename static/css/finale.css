@@ -94,7 +94,7 @@ div#fireball-do-thing {
     height:100px;
     bottom: 200px;
     /*right: 10px;*/
-    animation: fireballmove 7s normal;
+    animation: fireballmove 6s normal;
     animation-direction: normal;
     animation-timing-function: linear;
     font-size: 30px;

@@ -36,9 +36,9 @@ wordInput.addEventListener('input', (event)=> {
       let dog = document.querySelector('#second_enemy');
       let dog_div = document.querySelector('#ripdog');
       let rip = "http://0.0.0.0:8000/static/css/rip.png";
-      fireball_gif.id = "fireball_gif";
-      fireball_div.id = "fireball-do-thing";
-      actual_word4.innerHTML = random_word();
+      // fireball_gif.id = "fireball_gif";
+      // fireball_div.id = "fireball-do-thing";
+      // actual_word4.innerHTML = random_word();
       if (dog.src === rip) {
           dog.src = "/static/css/bossdoggo.gif";
           dog_div.id = "enemy2";
@@ -110,6 +110,12 @@ for (var i = 0; i < enemy_divs.length; i++) {
     let random_index = Math.floor(Math.random() * 112);
     return list[random_index]
   };
+
+setInterval(function fire(){
+    fireball_gif.id = "fireball_gif";
+    fireball_div.id = "fireball-do-thing";
+    actual_word4.innerHTML = random_word();
+    }, 6000);
 
 document.querySelector(".input").focus();
 document.querySelector(".input").select();
