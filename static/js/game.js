@@ -19,9 +19,10 @@ let actual_word1 = document.querySelector('.words1');
 let actual_word2 = document.querySelector('.words2');
 let actual_word3 = document.querySelector('.words3');
 let enemy_divs = document.querySelectorAll('div');
-console.log(enemy_divs)
+console.log(enemy_divs);
 let wordInput = document.querySelector('.input');
 
+let audio = new Audio('/static/css/Evil_laugh_sound_effect.mp3');
 
 actual_word1.innerHTML = random_word();
 actual_word2.innerHTML = random_word();
@@ -68,10 +69,11 @@ wordInput.addEventListener('input', (event)=> {
   });
   for (var i = 0; i < enemy_divs.length; i++) {
     enemy_divs[i].addEventListener('animationend', (ev)=>{
-      alert('Game Over!')
+      audio.play();
+      alert('Game Over!');
       window.location.assign("/");
     });
-  };
+  }
 
   function win_check() {
     let rips = document.querySelectorAll('#dead');

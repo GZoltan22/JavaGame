@@ -19,13 +19,14 @@ let actual_word3 = document.querySelector('.words3');
 let actual_word4 = document.querySelector('.words4');
 let wordInput = document.querySelector('.input');
 
-let enemy_divs = document.querySelectorAll('div')
+let enemy_divs = document.querySelectorAll('div');
 actual_word1.innerHTML = random_word();
 let checker = 0;
 
 let fireball_div = document.querySelector('#fireball-do-nothing');
 let fireball_gif = document.querySelector('#fireball_no');
 
+let audio = new Audio('/static/css/Evil_laugh_sound_effect.mp3');
 
 wordInput.addEventListener('input', (event)=> {
   if (actual_word1.innerHTML === event.target.value.toUpperCase()) {
@@ -35,8 +36,8 @@ wordInput.addEventListener('input', (event)=> {
       let dog = document.querySelector('#second_enemy');
       let dog_div = document.querySelector('#ripdog');
       let rip = "http://0.0.0.0:8000/static/css/rip.png";
-      fireball_div.id = "fireball-do-thing";
       fireball_gif.id = "fireball_gif";
+      fireball_div.id = "fireball-do-thing";
       actual_word4.innerHTML = random_word();
       if (dog.src === rip) {
           dog.src = "/static/css/bossdoggo.gif";
@@ -98,16 +99,17 @@ wordInput.addEventListener('input', (event) => {
 
 for (var i = 0; i < enemy_divs.length; i++) {
     enemy_divs[i].addEventListener('animationend', (ev)=>{
-      alert('Game Over!')
+    audio.play();
+      alert('Game Over!');
       window.location.assign("/");
     });
-  };
+  }
 
 
   function random_word() {
     let random_index = Math.floor(Math.random() * 112);
     return list[random_index]
-  }
+  };
 
 document.querySelector(".input").focus();
 document.querySelector(".input").select();
