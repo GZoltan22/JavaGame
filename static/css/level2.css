@@ -85,11 +85,6 @@ div#enemy5{
 	to {right: 79%;}		/*off-screen right*/
 	}
 
-@keyframes mymove
-	{
-	from {right: -10%;}
-  to {right:90%;}	
-	}
 
 .carousel-inner > .carousel-item > img {
     width:640px;
