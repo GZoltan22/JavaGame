@@ -16,11 +16,15 @@ const list = ['ACCOUNT','ACCURATE','ACRES','ACROSS','ACT','ACTION','ACTIVE','ACT
 let actual_word1 = document.querySelector('.words1');
 let actual_word2 = document.querySelector('.words2');
 let actual_word3 = document.querySelector('.words3');
+let actual_word4 = document.querySelector('.words4');
 let wordInput = document.querySelector('.input');
 
 let enemy_divs = document.querySelectorAll('div')
 actual_word1.innerHTML = random_word();
 let checker = 0;
+
+let fireball_div = document.querySelector('#fireball-do-nothing');
+let fireball_gif = document.querySelector('#fireball_no');
 
 
 wordInput.addEventListener('input', (event)=> {
@@ -31,11 +35,14 @@ wordInput.addEventListener('input', (event)=> {
       let dog = document.querySelector('#second_enemy');
       let dog_div = document.querySelector('#ripdog');
       let rip = "http://0.0.0.0:8000/static/css/rip.png";
+      fireball_div.id = "fireball-do-thing";
+      fireball_gif.id = "fireball_gif";
+      actual_word4.innerHTML = random_word();
       if (dog.src === rip) {
           dog.src = "/static/css/bossdoggo.gif";
           dog_div.id = "enemy2";
           actual_word2.innerHTML = random_word();
-      }
+      };
       if (checker / 2 === 1 || checker / 2 === 2) {
           let zombie = document.querySelector('#third_enemy')
           let zombie_div = document.getElementById('zombiehand')
@@ -45,11 +52,11 @@ wordInput.addEventListener('input', (event)=> {
               zombie.id = 'kiszombie'
               zombie_div.id = 'enemy3';
               actual_word3.innerHTML = random_word();
-          }
-      }
+          };
+      };
       if (checker === 5) {
           alert('G ----> G');
-          window.location.assign("/");
+          window.location.assign("/end");
       }
   }
 });
@@ -76,6 +83,18 @@ wordInput.addEventListener('input', (event) => {
       zombie.src = "/static/css/zombiehand.png";
     }
   });
+
+wordInput.addEventListener('input', (event) => {
+    if (actual_word4.innerHTML === event.target.value.toUpperCase()) {
+      event.target.value = '';
+      actual_word4.innerHTML = '';
+      let fireball_div_moving = document.querySelector('#fireball-do-thing');
+      let fireball_gif_moving = document.querySelector('#fireball_gif');
+      fireball_div_moving.id = "fireball-do-nothing";
+      fireball_gif_moving.id = "fireball_no";
+    }
+  });
+
 
 for (var i = 0; i < enemy_divs.length; i++) {
     enemy_divs[i].addEventListener('animationend', (ev)=>{
