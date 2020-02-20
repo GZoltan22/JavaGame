@@ -202,7 +202,7 @@ wordInput.addEventListener('input', (event)=> {
           };
       };
       if (checker === 5) {
-          alert('G ----> G');
+          alert('You can rest now, champion!');
           window.location.assign("/end");
       }
   }

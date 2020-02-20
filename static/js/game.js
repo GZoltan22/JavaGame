@@ -219,7 +219,6 @@ wordInput.addEventListener('input', (event)=> {
 
   function win_check() {
     let rips = document.querySelectorAll('#dead');
-    console.log(rips);
     if (rips.length / 2 === 3) {
       alert('You may proceed to the next level!');
       window.location.assign("/game_medium");
