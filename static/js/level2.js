@@ -117,4 +117,3 @@ document.querySelector(".input").select();
     let random_index = Math.floor(Math.random() * 112);
     return list[random_index]
   }
-  
