@@ -102,7 +102,7 @@ div#fireball-do-thing {
     text-align: center;
 }
 div#fireball-do-thing {
-    animation-delay: 0.2s;
+    animation-delay: 0s;
 }
 @keyframes fireballmove
 	{
@@ -148,4 +148,28 @@ div#enemy3{
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: 'Press Start 2P', cursive;
+}
+
+.full_health img{
+    position:absolute;
+    top: 65px;
+    left: 30px;
+    height: 200px;
+    width: 250px;
+}
+
+.half_health img{
+    position:absolute;
+    top: 65px;
+    left: 30px;
+    height: 200px;
+    width: 250px;
+}
+
+.died img{
+    position:absolute;
+    top: 65px;
+    left: 30px;
+    height: 200px;
+    width: 250px;
 }
