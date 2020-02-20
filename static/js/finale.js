@@ -89,3 +89,6 @@ for (var i = 0; i < enemy_divs.length; i++) {
     let random_index = Math.floor(Math.random() * 112);
     return list[random_index]
   }
+
+document.querySelector(".input").focus();
+document.querySelector(".input").select();

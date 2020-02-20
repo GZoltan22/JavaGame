@@ -160,3 +160,10 @@ document.getElementById("player").select();
  function gameOver(){
    alert('GAME OVER')
  }
+
+
+ function music() {
+     let music = new Audio();
+     music.src = "mlink.typeoffile";
+     music.play();
+ }
