@@ -40,7 +40,8 @@ wordInput.addEventListener('input', (event)=> {
     win_check()
   }
 });
-
+document.querySelector(".input").focus();
+document.querySelector(".input").select();
   wordInput.addEventListener('input', (event) => {
     if (actual_word2.innerHTML === event.target.value.toUpperCase()) {
       event.target.value = '';
