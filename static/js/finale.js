@@ -26,7 +26,7 @@ let checker = 0;
 let fireball_div = document.querySelector('#fireball-do-nothing');
 let fireball_gif = document.querySelector('#fireball_no');
 
-let audio = new Audio('static/css/Evil_laugh_sound_effect.mp3');
+let audio = new Audio('/static/css/Evil_laugh_sound_effect.mp3');
 
 wordInput.addEventListener('input', (event)=> {
   if (actual_word1.innerHTML === event.target.value.toUpperCase()) {

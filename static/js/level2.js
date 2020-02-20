@@ -22,7 +22,7 @@ let actual_word5 = document.querySelector('.words5');
 let wordInput = document.querySelector('.input');
 let enemy_divs = document.querySelectorAll('div');
 
-let audio = new Audio('static/css/Evil_laugh_sound_effect.mp3');
+let audio = new Audio('/static/css/Evil_laugh_sound_effect.mp3');
 
 actual_word1.innerHTML = random_word();
 actual_word2.innerHTML = random_word();
