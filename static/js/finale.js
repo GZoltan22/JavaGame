@@ -157,8 +157,6 @@ const list = ['ACCOUNT','ACCURATE','ACRES','ACROSS','ACT','ACTION','ACTIVE','ACT
   'YEAR','YELLOW','YES','YESTERDAY','YET','YOU','YOUNG','YOUNGER',
   'YOUR','YOURSELF','YOUTH','ZERO','ZOO'];
 
-console.log(list.length())
-
 let actual_word1 = document.querySelector('.words1');
 let actual_word2 = document.querySelector('.words2');
 let actual_word3 = document.querySelector('.words3');
@@ -189,7 +187,7 @@ wordInput.addEventListener('input', (event)=> {
           dog.src = "/static/css/bossdoggo.gif";
           dog_div.id = "enemy2";
           actual_word2.innerHTML = random_word();
-      };
+      }
       if (checker / 2 === 1 || checker / 2 === 2) {
           let zombie = document.querySelector('#third_enemy')
           let zombie_div = document.getElementById('zombiehand')
@@ -199,8 +197,8 @@ wordInput.addEventListener('input', (event)=> {
               zombie.id = 'kiszombie'
               zombie_div.id = 'enemy3';
               actual_word3.innerHTML = random_word();
-          };
-      };
+          }
+      }
       if (checker === 5) {
           alert('G ----> G');
           window.location.assign("/end");
@@ -253,9 +251,10 @@ for (var i = 0; i < enemy_divs.length; i++) {
 
 
   function random_word() {
-    let random_index = Math.floor(Math.random() * 1296);
-    return list[random_index]
-  };
+    let random_index = Math.floor(Math.random() * 1000);
+    return list[random_index];
+    console.log(random_index);
+  }
 
 setInterval(function fire(){
     fireball_gif.id = "fireball_gif";
