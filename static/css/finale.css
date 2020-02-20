@@ -61,9 +61,9 @@ div#enemy3 {
    bottom: 0;
    right: 350px;
    text-align: center;
-   font-size: 34px;
-   animation: mymove 7s infinite; !* total animation time for each image is 8 seconds, loops forever *!
-   animation-direction: normal; */
+   font-size: 30px;
+   animation: mymove 7s normal;
+   animation-direction: normal;
    animation-timing-function: linear;
 }
 div#enemy3 {
@@ -74,7 +74,41 @@ div#enemy3 {
 #second_enemy {
         width: 150px;
 }
+#fireball_no {
+    width: 0px;
+    height: 0px;
+}
+#fireball_gif {
+    width 55px;
+    height: 55px;
+    transform: rotateY(180deg);
+}
 
+div#fireball-do-nothing {
+    width:0px;
+    height:0px;
+}
+div#fireball-do-thing {
+    position: absolute;
+    width:100px;
+    height:100px;
+    bottom: 200px;
+    /*right: 10px;*/
+    animation: fireballmove 7s normal;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+div#fireball-do-thing {
+    animation-delay: 0.2s;
+}
+@keyframes fireballmove
+	{
+	from {right: 10%;}	/*off-screen left (adjust for image width)*/
+	to {right:85%;}		/*off-screen right*/
+	}
 
 div#enemy2, div#enemy3 {
     position: absolute;
@@ -82,7 +116,7 @@ div#enemy2, div#enemy3 {
     right: -1000px;
     text-align: center;
     font-size: 34px;
-    animation: mymove 7s normal; /* total animation time for each image is 8 seconds, loops forever */
+    animation: mymove 7s normal;
     animation-direction: normal;
     animation-timing-function: linear;
 }

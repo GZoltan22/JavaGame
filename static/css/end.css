@@ -2,8 +2,26 @@ body {
     background-image: url("bonfire_try.png");
 }
 
-div.bonfire{
+div.bonfire img{
+    width: 80%;
     position: absolute;
-    bottom: -0rem;
-    right: 37rem;
+    bottom: 5.5rem;
+    right: 13rem;
+}
+
+div.bonfire {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+
+    -webkit-animation: fadein 5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
