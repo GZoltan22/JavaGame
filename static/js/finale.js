@@ -19,7 +19,7 @@ let actual_word3 = document.querySelector('.words3');
 let actual_word4 = document.querySelector('.words4');
 let wordInput = document.querySelector('.input');
 
-let enemy_divs = document.querySelectorAll('div')
+let enemy_divs = document.querySelectorAll('div');
 actual_word1.innerHTML = random_word();
 let checker = 0;
 

@@ -68,7 +68,7 @@ wordInput.addEventListener('input', (event)=> {
   });
   for (var i = 0; i < enemy_divs.length; i++) {
     enemy_divs[i].addEventListener('animationend', (ev)=>{
-      alert('Game Over!')
+      alert('Game Over!');
       window.location.assign("/");
     });
   };
