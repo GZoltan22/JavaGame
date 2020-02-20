@@ -243,8 +243,15 @@ document.querySelector(".input").select();
  for (var i = 0; i < enemy_divs.length; i++) {
     enemy_divs[i].addEventListener('animationend', (ev)=>{
       audio.play();
+    health_checker++;
+    if (health_checker === 1) {
+      image.src = '/static/css/half_health.png';
+    }
+    if (health_checker === 2) {
+      image.src = '/static/css/empty_health.png';
       alert('Game Over!');
       window.location.assign("/");
+    }
     });
   }
 
