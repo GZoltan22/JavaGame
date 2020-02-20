@@ -157,8 +157,6 @@ const list = ['ACCOUNT','ACCURATE','ACRES','ACROSS','ACT','ACTION','ACTIVE','ACT
   'YEAR','YELLOW','YES','YESTERDAY','YET','YOU','YOUNG','YOUNGER',
   'YOUR','YOURSELF','YOUTH','ZERO','ZOO'];
 
-console.log(list.length())
-
 let actual_word1 = document.querySelector('.words1');
 let actual_word2 = document.querySelector('.words2');
 let actual_word3 = document.querySelector('.words3');
@@ -186,9 +184,6 @@ wordInput.addEventListener('input', (event)=> {
       let dog = document.querySelector('#second_enemy');
       let dog_div = document.querySelector('#ripdog');
       let rip = "http://0.0.0.0:8000/static/css/rip.png";
-      // fireball_gif.id = "fireball_gif";
-      // fireball_div.id = "fireball-do-thing";
-      // actual_word4.innerHTML = random_word();
       if (dog.src === rip) {
           dog.src = "/static/css/bossdoggo.gif";
           dog_div.id = "enemy2";
@@ -276,7 +271,8 @@ for (var i = 0; i < enemy_divs.length; i++) {
 
 
   function random_word() {
-    let random_index = Math.floor(Math.random() * 1296);
+    let random_index = Math.floor(Math.random() * 1000);
+    console.log(random_index);
     return list[random_index]
   };
 
