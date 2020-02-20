@@ -20,6 +20,7 @@ let actual_word4 = document.querySelector('.words4');
 let actual_word5 = document.querySelector('.words5');
 
 let wordInput = document.querySelector('.input');
+let enemy_divs = document.querySelectorAll('div');
 
 actual_word1.innerHTML = random_word();
 actual_word2.innerHTML = random_word();
@@ -92,6 +93,13 @@ wordInput.addEventListener('input', (event)=> {
     }
   });
 
+ for (var i = 0; i < enemy_divs.length; i++) {
+    enemy_divs[i].addEventListener('animationend', (ev)=>{
+      alert('Game Over!')
+      window.location.assign("/");
+    });
+  };
+
   function win_check() {
     let rips = document.querySelectorAll('#dead');
     console.log(rips);
@@ -105,3 +113,115 @@ wordInput.addEventListener('input', (event)=> {
     let random_index = Math.floor(Math.random() * 112);
     return list[random_index]
   }
+
+  function moveEnemy() {
+  moveZombie1();
+  setTimeout(function () {
+    moveZombie2();
+  },2000)
+  setTimeout(function () {
+    moveZombie3();
+  },4000)
+   setTimeout(function () {
+    moveZombie4();
+  },6000)
+    setTimeout(function () {
+    moveZombie5();
+  },7000)
+ }
+
+
+ function moveZombie1() {
+  let zombie1 = document.getElementById("enemy1");
+  let pos = 0;
+  let zombie1IsDead = document.getElementById("first_enemy");
+  let id = setInterval(frame, 5);
+  function frame() {
+      if (pos === 1600) {
+        gameOver();
+      }
+      else if (zombie1IsDead.id === ('dead')) {
+        clearInterval(frame);
+      }
+      else {
+        pos = pos + 2;
+        zombie1.style.right = pos + "px";
+      }
+    }
+ }
+
+ function moveZombie2() {
+    let zombie2 = document.getElementById("enemy2");
+    let zombie2IsDead = document.getElementById("second_enemy");
+    let pos = 0;
+    let id = setInterval(frame,5);
+    function frame() {
+      if (pos === 1600) {
+        gameOver();
+      }
+      else if (zombie2IsDead.id === ('dead')) {
+        clearInterval(frame);
+      }
+      else {
+        pos = pos + 1;
+        zombie2.style.right = pos + "px";
+      }
+    }
+ }
+ function moveZombie3() {
+    let zombie3 = document.getElementById("enemy3");
+    let zombie3IsDead = document.getElementById("third_enemy");
+    let pos = 0;
+    let id = setInterval(frame,5);
+    function frame() {
+      if (pos === 1600) {
+        gameOver();
+      }
+      else if (zombie3IsDead.id === ('dead')) {
+        clearInterval(frame);
+      }
+      else {
+        pos = pos + 1;
+        zombie3.style.right = pos + "px";
+      }
+    }
+ }
+ function moveZombie4() {
+    let zombie4 = document.getElementById("enemy4");
+    let zombie4IsDead = document.getElementById("fourth_enemy");
+    let pos = 0;
+    let id = setInterval(frame,5);
+    function frame() {
+      if (pos === 1600) {
+        gameOver();
+      }
+      else if (zombie4IsDead.id === ('dead')) {
+        clearInterval(frame);
+      }
+      else {
+        pos = pos + 1;
+        zombie4.style.right = pos + "px";
+      }
+    }
+ }
+ function moveZombie5() {
+    let zombie5 = document.getElementById("enemy5");
+    let zombie5IsDead = document.getElementById("fifth_enemy");
+    let pos = 0;
+    let id = setInterval(frame,5);
+    function frame() {
+      if (pos === 1600) {
+        gameOver();
+      }
+      else if (zombie5IsDead.id === ('dead')) {
+        clearInterval(frame);
+      }
+      else {
+        pos = pos + 1;
+        zombie5.style.right = pos + "px";
+      }
+    }
+ }
+ function gameOver(){
+   alert('GAME OVER')
+ }

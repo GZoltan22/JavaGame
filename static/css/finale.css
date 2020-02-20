@@ -3,8 +3,9 @@ body {
 }
 
 .input {
-    /*background: url('bubble.png') center center no-repeat;*/
+    background: url('bubble.png') center center no-repeat;
     width: 150px;
+    height: 45px;
     position: fixed;
     bottom: 226px;
     left: 90px;
@@ -51,17 +52,19 @@ body {
     right: 350px;
     position: absolute;
 }
-#enemy3 {
+#kiszombie {
     transform: rotateY(180deg);
 }
 div#enemy3 {
-    position: absolute;
-    bottom: 0;
-    right: 350px;
-    text-align: center;
-    font-size: 34px;
-    animation: mymove 10s infinite; /* total animation time for each image is 8 seconds, loops forever */
-    animation-direction: normal;
+   position: absolute;
+   width: 150px;
+   bottom: 0;
+   right: 350px;
+   text-align: center;
+   font-size: 34px;
+   animation: mymove 7s infinite; !* total animation time for each image is 8 seconds, loops forever *!
+   animation-direction: normal; */
+   animation-timing-function: linear;
 }
 div#enemy3 {
     animation-delay:0s;
@@ -73,27 +76,32 @@ div#enemy3 {
 }
 
 
-div#enemy2 {
+div#enemy2, div#enemy3 {
     position: absolute;
     bottom: 0;
     right: -1000px;
     text-align: center;
     font-size: 34px;
-    animation: mymove 10s normal; /* total animation time for each image is 8 seconds, loops forever */
+    animation: mymove 7s normal; /* total animation time for each image is 8 seconds, loops forever */
     animation-direction: normal;
+    animation-timing-function: linear;
 }
 
 div#enemy2{
     animation-delay:0s;
     -webkit-animation-delay: 0s;
 }
-
+div#enemy3{
+    animation-delay:1s;
+    /*-webkit-animation-delay: 1s;*/
+}
 
 @keyframes mymove
 	{
 	from {right: 0%;}	/*off-screen left (adjust for image width)*/
-	to {right:80%;}		/*off-screen right*/
+	to {right:85%;}		/*off-screen right*/
 	}
+    
 .carousel-inner > .carousel-item > img {
     width:640px;
   height:360px;
@@ -102,11 +110,7 @@ div#enemy2{
 
 
 .btn-huge {
-    /*position: absolute;*/
-    /*right: -5rem;*/
-    /*top: 5rem;*/
-    /*font-family: 'Press Start 2P', cursive;;*/
-    /*font-size: 11px;*/
+
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: 'Press Start 2P', cursive;
