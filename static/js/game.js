@@ -16,6 +16,8 @@
 let actual_word1 = document.querySelector('.words1');
 let actual_word2 = document.querySelector('.words2');
 let actual_word3 = document.querySelector('.words3');
+let enemy_divs = document.querySelectorAll('div');
+console.log(enemy_divs)
 let wordInput = document.querySelector('.input');
 
 
@@ -62,6 +64,12 @@ wordInput.addEventListener('input', (event)=> {
     win_check()
     }
   });
+  for (var i = 0; i < enemy_divs.length; i++) {
+    enemy_divs[i].addEventListener('animationend', (ev)=>{
+      alert('Game Over!')
+      window.location.assign("/");
+    });
+  };
 
   function win_check() {
     let rips = document.querySelectorAll('#dead');

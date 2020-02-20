@@ -18,6 +18,7 @@ let actual_word2 = document.querySelector('.words2');
 let actual_word3 = document.querySelector('.words3');
 let wordInput = document.querySelector('.input');
 
+let enemy_divs = document.querySelectorAll('div')
 actual_word1.innerHTML = random_word();
 let checker = 0;
 
@@ -35,7 +36,7 @@ wordInput.addEventListener('input', (event)=> {
           dog_div.id = "enemy2";
           actual_word2.innerHTML = random_word();
       }
-      if (checker % 2 === 0) {
+      if (checker / 2 === 1 || checker / 2 === 2) {
           let zombie = document.querySelector('#third_enemy')
           let zombie_div = document.getElementById('zombiehand')
           let zombiehand_src = "http://0.0.0.0:8000/static/css/zombiehand.png"
@@ -60,7 +61,6 @@ wordInput.addEventListener('input', (event) => {
       let enemy = document.getElementById('second_enemy');
     let enemy_div = document.getElementById('enemy2');
     enemy_div.id = ('ripdog');
-    enemy.id = ('second_enemy');
     enemy.src = "/static/css/rip.png";
     }
   });
@@ -69,12 +69,20 @@ wordInput.addEventListener('input', (event) => {
     if (actual_word3.innerHTML === event.target.value.toUpperCase()) {
       event.target.value = '';
       actual_word3.innerHTML = '';
-    let zombie_div = document.getElementById('enemy3');
-    let zombie = document.getElementById('third_enemy');
-    zombie_div.id = ('zombiehand');
-    zombie.src = "/static/css/zombiehand.png";
+      let zombie_div = document.getElementById('enemy3');
+      let zombie = document.getElementById('kiszombie');
+      zombie_div.id = ('zombiehand');
+      zombie.src = "/static/css/zombiehand.png";
     }
   });
+
+for (var i = 0; i < enemy_divs.length; i++) {
+    enemy_divs[i].addEventListener('animationend', (ev)=>{
+      alert('Game Over!')
+      window.location.assign("/");
+    });
+  };
+
 
   function random_word() {
     let random_index = Math.floor(Math.random() * 112);

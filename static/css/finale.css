@@ -5,9 +5,19 @@ body {
 .input {
     /*background: url('bubble.png') center center no-repeat;*/
     width: 150px;
+    height: 45px;
     position: fixed;
-    bottom: 225px;
-    left: 50px;
+    bottom: 226px;
+    left: 90px;
+    border-color: white;
+}
+
+.text img {
+    height: 290px;
+    width: 205px;
+    position: fixed;
+    bottom: 60px;
+    left: 53px;
 }
 
 .words1, .words2, .words3 {
@@ -45,14 +55,16 @@ body {
 #kiszombie {
     transform: rotateY(180deg);
 }
-div#enemy3 {
-    position: absolute;
-    bottom: 0;
-    right: 350px;
-    text-align: center;
-    font-size: 34px;
-    animation: mymove 10s infinite; /* total animation time for each image is 8 seconds, loops forever */
-    animation-direction: normal;
+/*div#enemy3 {*/
+/*    position: absolute;*/
+/*    width: 150px;*/
+/*    bottom: 0;*/
+/*    right: 350px;*/
+/*    text-align: center;*/
+/*    font-size: 34px;*/
+/*    animation: mymove 7s infinite; !* total animation time for each image is 8 seconds, loops forever *!*/
+/*    animation-direction: normal;*/
+/*    animation-timing-function: linear;*/
 }
 div#enemy3 {
     animation-delay:0s;
@@ -64,26 +76,31 @@ div#enemy3 {
 }
 
 
-div#enemy2 {
+div#enemy2, div#enemy3 {
     position: absolute;
     bottom: 0;
     right: -1000px;
     text-align: center;
     font-size: 34px;
-    animation: mymove 10s normal; /* total animation time for each image is 8 seconds, loops forever */
+    animation: mymove 7s normal; /* total animation time for each image is 8 seconds, loops forever */
     animation-direction: normal;
+    animation-timing-function: linear;
 }
 
 div#enemy2{
     animation-delay:0s;
     -webkit-animation-delay: 0s;
 }
+div#enemy3{
+    animation-delay:1s;
+    /*-webkit-animation-delay: 1s;*/
+}
 
 
 @keyframes mymove
 	{
 	from {right: 0%;}	/*off-screen left (adjust for image width)*/
-	to {right:80%;}		/*off-screen right*/
+	to {right:85%;}		/*off-screen right*/
 	}
 .carousel-inner > .carousel-item > img {
     width:640px;

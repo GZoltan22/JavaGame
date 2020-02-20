@@ -20,6 +20,7 @@ let actual_word4 = document.querySelector('.words4');
 let actual_word5 = document.querySelector('.words5');
 
 let wordInput = document.querySelector('.input');
+let enemy_divs = document.querySelectorAll('div');
 
 actual_word1.innerHTML = random_word();
 actual_word2.innerHTML = random_word();
@@ -91,6 +92,13 @@ wordInput.addEventListener('input', (event)=> {
     win_check()
     }
   });
+
+ for (var i = 0; i < enemy_divs.length; i++) {
+    enemy_divs[i].addEventListener('animationend', (ev)=>{
+      alert('Game Over!')
+      window.location.assign("/");
+    });
+  };
 
   function win_check() {
     let rips = document.querySelectorAll('#dead');
