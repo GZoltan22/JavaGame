@@ -86,3 +86,5 @@ wordInput.addEventListener('input', (event)=> {
     let random_index = Math.floor(Math.random() * 112);
     return list[random_index]
   }
+  document.getElementById("player").focus();
+document.getElementById("player").select();
