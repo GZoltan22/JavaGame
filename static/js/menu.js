@@ -13,5 +13,5 @@ doggo.addEventListener('click', (event)=>{
 var barking = document.getElementById("myAudio");
 function playaudio() {
   barking.play();
-}
+};
 
